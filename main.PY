@@ -2,16 +2,23 @@ import os
 
 import eel
 
-
-eel.init("www")
-
-# open at host
+from engine.features import *
+from engine.command import *
 
 
+def start():
+    
+    eel.init("www")
 
-os.system('start msedge.exe --app="http://localhost:8000/index.html"')
+    playAssistantSound()
 
-# tell which file is of frontend
 
-eel.start('index.html', mode=None, host='localhost', block=True)
+
+
+
+
+    os.system('start msedge.exe --app="http://localhost:8000/index.html"')
+
+
+    eel.start('index.html', mode=None, host='localhost', block=True)
 
